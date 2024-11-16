@@ -18,7 +18,17 @@ console.log(currentCoordinates(57, 23, -12));
 
 /* Task 4: Understanding `this`: Message from Home Base */
 // TODO: Inside an object named `spacecraft`, create a method named `receiveMessage` using arrow function syntax. This method should log `"Message received: "` followed by a message it receives as a parameter. Directly call `receiveMessage` within `spacecraft` and observe. Observe and explain the behavior of `this` in this context as a comment.
+
+const spacecraft = {
+  name: "Galaxy Cruiser",
+  receiveMessage: (message) => {
+    console.log(`Message received: ${message}`);
+    console.log(`This spacecraft is: ${this.name}`);
+  },
+};
+spacecraft.receiveMessage("We are coming home!");
+
 /*
  * Observations:
- * TODO: Explain here.
+ * TODO: The console.log statement prints "Message received: We are coming home!" as expected. However, the console.log statement that references `this.name` prints `undefined`. This is because arrow functions do not bind their own `this` value, so `this` refers to the global object, which does not have a `name` property. In this case, `this` refers to the global object, not the `spacecraft` object.
  */
