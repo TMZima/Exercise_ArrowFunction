@@ -7,6 +7,9 @@ activateHyperdrive();
 /* Task 2: Implicit Return: Scan for Lifeforms */
 // TODO: Create an arrow function named `scanForLife` that implicitly returns `"No lifeforms detected"` without using curly braces. Print the result of calling `scanForLife`.
 
+const scanForLife = () => "No lifeforms detected";
+console.log(scanForLife());
+
 /* Task 3: Implicit Return with Objects: Log Coordinates */
 // TODO: Write an arrow function named `currentCoordinates` that returns an object with properties `x`, `y`, and `z`, representing coordinates in space. Use implicit return. Print the returned object from `currentCoordinates`.
 
